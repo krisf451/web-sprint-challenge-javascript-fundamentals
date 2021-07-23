@@ -30,13 +30,30 @@ Edit this document to include your answers after each question. Make sure to lea
 
    <!--Making change for codegrade -->
 
+   .forEach - does not make a new array, so must create one to push desired items into. It must iterate through every single item in the array without stopping. It also doesn't need a return statement, that is optional. A use case would be if you had an array of objects, and you wanted a new array with only a certain key in the object you could use forEach.
+   .map - Returns a new array, so you won't need to create a new one. Requires the return keyword, what goes after the return keyword is what is pushed into the new array created by .map. One example of a use case is what we went over in the guides project. Say you have an array of objects, and you want to change all of the 'name' key values into lowercase. You could .map over the entire array, changing every name to lowercase with .map.
+   .filter - also returns a new array automatically similar to .map. Also, requires a return statement like .map. .filter filters results into a new array based on somehting that can be true or false, if it's true it's included, if it's false it's excluded. A use case for .filter would be something similar to today's sprint challenge. Say we had an array of objects with a 'population' key... and we wanted a new array with only the objects that have a population less than 100,000. You could use filter to create a new array with only the objects who met that condition.
+
 2. Explain the difference between a callback and a higher order function.
+
+Callback is what we pass into a function as an argument, a higher order function is the function that is able to accept function arguments.
 
 3. Explain what a closure is.
 
+The million dollar question. The difference between hired and not hired. A closure is the combination of a function bundled together with references to its surrounding state (the lexical environment)(javascript has lexical scope). In other words, a closure gives you access to an outer function's scope from an inner function. In javascript, closures are created every time a function is created, at function creation time. To use a closure, define a function inside another function and expose it. To expose a function, return it or pass it to another function. The inner function will have access to the variables in the outer funciton scope, even after the outer funciton has returned.
+
+Per google search, not my own words.
+
 4. Describe the four principles of the 'this' keyword.
 
+Window binding
+Implicit binding
+Explicit binding
+New binding
+
 5. Why do we need super() in an extended class?
+
+to inherit any methods from the parent class
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
